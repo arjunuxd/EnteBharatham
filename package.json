@@ -1,0 +1,39 @@
+{
+  "name": "entebharatham",
+  "private": true,
+  "version": "0.1.0",
+  "description": "EnteBharatham — Ente Bharatham (My India), a community-powered cultural heritage archive to preserve and share India's living cultural heritage.",
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @entebharatham/shared && npm run build -w @entebharatham/api && npm run build -w @entebharatham/web",
+    "typecheck": "npm run build -w @entebharatham/shared && npm run typecheck -w @entebharatham/api && npm run typecheck -w @entebharatham/web",
+    "test": "npm run build -w @entebharatham/shared && npm run test -w @entebharatham/api && npm run test -w @entebharatham/web",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "audit:deps": "npm audit --audit-level=high",
+    "dev:api": "npm run dev -w @entebharatham/api",
+    "dev:web": "npm run dev -w @entebharatham/web"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/multer": "^2.3.0",
+    "@types/nodemailer": "^8.0.2",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.71.2",
+    "vite": "^7.3.7"
+  },
+  "dependencies": {
+    "multer": "^2.4.0"
+  }
+}

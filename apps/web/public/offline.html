@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#1E1B4B" />
+    <meta name="robots" content="noindex" />
+    <title>Offline | EnteBharatham</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --ivory: #f6f7fb;
+        --cream: #eef0f7;
+        --paper: #ffffff;
+        --indigo: #4f46e5;
+        --indigo-deep: #1e1b4b;
+        --midnight: #0b0d1f;
+        --coral: #fb7358;
+        --gold: #f5b942;
+        --ink: #121426;
+        --earth: #4b5168;
+        --line: #e6e8f0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100svh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: max(1.25rem, env(safe-area-inset-top)) max(1.25rem, env(safe-area-inset-right))
+          max(1.25rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-left));
+        background-color: var(--midnight);
+        background-image:
+          radial-gradient(42rem 30rem at 88% -8%, rgb(79 70 229 / 0.42), transparent 62%),
+          radial-gradient(32rem 24rem at 0% 100%, rgb(251 115 88 / 0.22), transparent 66%),
+          radial-gradient(28rem 22rem at 55% 120%, rgb(245 185 66 / 0.12), transparent 68%);
+        background-repeat: no-repeat;
+        color: var(--ink);
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          Arial,
+          sans-serif;
+        line-height: 1.6;
+      }
+
+      main {
+        width: min(100%, 36rem);
+        border: 1px solid rgb(255 255 255 / 0.08);
+        border-radius: 1.75rem;
+        background: var(--paper);
+        box-shadow:
+          0 2px 8px rgb(18 20 38 / 0.16),
+          0 44px 100px -52px rgb(11 13 31 / 0.9);
+        padding: clamp(1.5rem, 5vw, 3.5rem);
+        overflow: hidden;
+        position: relative;
+      }
+
+      main::before {
+        content: '';
+        position: absolute;
+        inset: 0 0 auto;
+        height: 3px;
+        background: linear-gradient(90deg, var(--indigo), var(--coral) 55%, var(--gold));
+      }
+
+      .mark {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      .eyebrow {
+        margin: 2rem 0 0;
+        color: var(--indigo);
+        font-size: 0.6875rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0.9rem 0 0;
+        font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+        font-size: clamp(2.25rem, 8vw, 3.25rem);
+        font-weight: 400;
+        line-height: 1.02;
+        letter-spacing: -0.03em;
+      }
+
+      h1 em {
+        display: block;
+        color: var(--indigo);
+        font-weight: 400;
+      }
+
+      p {
+        margin: 1.25rem 0 0;
+        max-width: 34rem;
+        color: var(--earth);
+        font-size: 1rem;
+      }
+
+      .rule {
+        margin: 2rem 0;
+        height: 1px;
+        border: 0;
+        background: var(--line);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      a {
+        display: inline-flex;
+        min-height: 2.875rem;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        padding: 0.65rem 1.25rem;
+        font-size: 0.8125rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      a.primary {
+        background: var(--indigo-deep);
+        color: var(--ivory);
+      }
+
+      a.primary:hover {
+        background: var(--indigo);
+      }
+
+      a.secondary {
+        border-color: var(--line);
+        background: var(--cream);
+        color: var(--ink);
+      }
+
+      a.secondary:hover {
+        border-color: rgb(79 70 229 / 0.35);
+        color: var(--indigo-deep);
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--indigo);
+        outline-offset: 3px;
+        box-shadow: 0 0 0 5px rgb(79 70 229 / 0.16);
+      }
+
+      footer {
+        margin-top: 2rem;
+        color: var(--earth);
+        font-size: 0.75rem;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        a {
+          transition:
+            background-color 150ms ease,
+            border-color 150ms ease,
+            color 150ms ease;
+        }
+      }
+
+      @media (max-width: 26rem) {
+        .actions a {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <svg
+        class="mark"
+        viewBox="0 0 64 64"
+        aria-hidden="true"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M14 49V27c0-10.5 8-18 18-18s18 7.5 18 18v22"
+          stroke="#1E1B4B"
+          stroke-width="3.2"
+          stroke-linecap="round"
+        />
+        <path
+          d="M21.5 49V28.5C21.5 21.8 26.2 16.2 32 16.2s10.5 5.6 10.5 12.3V49"
+          stroke="#1E1B4B"
+          stroke-width="1.25"
+          opacity=".5"
+        />
+        <path
+          d="M32 42.5c-3.9 0-6.5-2.8-6.5-6.3 0-4.5 6.5-11.1 6.5-11.1s6.5 6.6 6.5 11.1c0 3.5-2.6 6.3-6.5 6.3Z"
+          fill="#FB7358"
+        />
+        <path d="M12 49h40" stroke="#1E1B4B" stroke-width="3.2" stroke-linecap="round" />
+        <circle cx="32" cy="53.4" r="1.5" fill="#FB7358" />
+      </svg>
+
+      <p class="eyebrow">The archive is still here</p>
+      <h1>You&rsquo;re offline. <em>Take your time.</em></h1>
+      <p>
+        This page has not been saved on your device yet. Pages you have already visited remain
+        available, and the full archive will return as soon as you reconnect.
+      </p>
+      <hr class="rule" />
+      <div class="actions">
+        <a class="primary" href="/">Return to EnteBharatham</a>
+        <a class="secondary" href="/explore">Try Explore</a>
+      </div>
+      <footer>Every story matters. Every tradition lives on.</footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Environment files (never commit real values)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test coverage
+coverage/
+
+# Local audit output (may describe dependency advisories)
+/audit.json
+
+# Editor and OS artifacts
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Vite
+.vite/
+
+# Local phase report (owner requirement: never committed)
+phase.md
+# Uploads
+uploads/
+*.upload
+
